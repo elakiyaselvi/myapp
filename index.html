@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+	
+    <title>Sample App</title>
+</head>
+
+<body>
+    <div class="s_app">
+		<h3 class="app_hd">My App</h3>
+		 <img class="toggle" class="sidebar_img" src="https://lh3.googleusercontent.com/-scTldkWLcUc/V1MWjkoDDTI/AAAAAAAAFbw/86RCazPyuKs9n9zPdXJHLByPKFfBH7PRACL0B/s346/mobile_ico.png" onclick="toggle_sidebar()" style="position: fixed; right: 10px; top: 10px" />
+		 <div id="sidebar" >
+            <div class="m_header">
+				<h3>My App</h3>
+				<ul>
+					<li><span class="ic_m">-></span> Home</li>
+					<li><span class="ic_m">-></span> About</li>
+					<li><span class="ic_m">-></span> Gallery</li>
+					<li><span class="ic_m">-></span> Upcoming Events</li>
+					<li><span class="ic_m">-></span> Praise Reports</li>
+					<li><a href="contact_us.html"><span class="ic_m">-></span> Contact Us</a></li>
+				</ul>
+			</div>
+        </div>
+		<div class="box1 f_box">
+			<h3 class="box_hd">Service Times</h3>
+			<img class="block_img" src="https://lh3.googleusercontent.com/-s4wPsTwVO0Y/V1Lw_f2_NiI/AAAAAAAAFas/alpMRgMFgeI4C7Va45MJMOU-960JmuT-gCL0B/w220-h180-no/92db349026144f4180a2f6d95d755e03.jpg"/>
+			<p class ="blk_txt">Sun: Worship at 9 a.m<br/>
+				Wed: Service at 6 p.m<br/>
+				Last Fri Monthly: Vigil at 10 p.m</p>
+		</div>
+		<div class="box1 s_box">
+			<h3 class="box_hd">Watch Online</h3>
+			<iframe width="80%" height="181" src="https://www.youtube.com/embed/WjEy4Gf8tXA" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="box1 t_box">
+			<h3 class="box_hd">TV Ministry</h3>
+			<img class="block_img" src="https://lh3.googleusercontent.com/-kPvBYMacJlw/V1L2PrvbSpI/AAAAAAAAFbE/VEYpjpZgxPQ2g2ea7pBxQBcWjgMOxHUeACL0B/w346-h283/tv.jpg">
+			<p class ="blk_txt">TVC Lagos<br/>
+				Thursday: 7:10 a.m<br/>
+				Sunday: 7:36 a.m</p>
+		</div>
+		
+	</div>
+	
+</div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+	  <script>
+        function toggle_sidebar()
+        {
+            var sidebar = document.getElementById("sidebar");
+            
+            console.log(sidebar.style.left);
+            
+            if(sidebar.style.left == "-200px")
+            {
+                sidebar.style.left = "0px";
+            }
+            else
+            {
+                sidebar.style.left = "-200px";
+            }
+        }
+    </script>
+</body>
+
+</html>
