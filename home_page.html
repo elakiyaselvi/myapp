@@ -39,52 +39,50 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
-	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <title>Sample App</title>
 </head>
 
 <body>
     <div class="s_app">
-		 
-		<div class="blk_1  outer_blk">
-			<a href="about_us.html">
-				<div class="inner_bkl1">
-						<span class="ic_home fa fa-cubes"/>
-						<p class="m_text">About Us</p>
-				</div>
-			</a>	
+		<div class="header">
+			<h3> My App</h3>
 		</div>
-		<div class="blk_2  outer_blk">
-			<div class="inner_bk21">
-					<span class="ic_home fa fa-calendar"/>
-					<p class="m_text">Events</p>
+		 <img class="toggle" class="sidebar_img" src="img/mobile_ico.png" onclick="toggle_sidebar()" style="position: fixed; right: 10px; top: 10px" />
+		 <div id="sidebar" >
+            <div class="m_header">
+				<h3>My App</h3>
+				<ul>
+					<li><a href="index.html"><span class="ic_m  fa fa-home"></span> Home</a></li>
+					<li><a href="about_us.html"><span class="ic_m fa fa-cubes"></span> About</a></li>
+					<li><span class="ic_m fa fa-calendar"></span> Upcoming Events</li>
+					<li><span class="ic_m fa fa-eye"></span> Praise Reports</li>
+					<li><a href="contact_us.html"><span class="ic_m fa fa-envelope"></span> Contact Us</a></li>
+				</ul>
+			</div>
+        </div>
+		<div class="main_container">
+			<div class="hm_blk1">
+				<h3>Service Times</h3>
+				<img src="img/img1.jpg"/>
+				<p class="blk_p">
+					Sun: Worship at 9 a.m<br/>
+					Wed: Service at 6 p.m<br/>
+					Last Fri Monthly: Vigil at 10 p.m<br/>
+				</p>
+			</div>
+			<hr class="hm_hr">
+			<div class="hm_blk1">
+				<h3>TV Ministry</h3>
+				<img src="img/tv.jpg"/>
+				<p class="blk_p">
+					TVC Lagos<br/>
+					Thursday: 7:10 am<br/>
+					Sunday: 7:36 a.m<br/>
+				</p>
 			</div>
 		</div>
-		<div class="blk_3  outer_blk">
-			<a href="home_page.html">
-				<div class="inner_bk31">
-						<span class="ic_home fa fa-home fa-2"/>
-						<div>
-						<img src="img/logo_st.png"/>
-						</div>
-				</div>
-			</a>	
-		</div>
-		<div class="blk_2  outer_blk">
-			<div class="inner_bk21">
-					<span class="ic_home fa fa-eye"/>
-					<p class="m_text">Message</p>
-			</div>
-		</div>
-		<div class="blk_5  outer_blk">
-			<a href="contact_us.html">
-				<div class="inner_bkl1">
-						<span class="ic_home fa fa-envelope"/>
-						<p class="m_text">Contact</p>
-				</div>
-			</a>
-		</div>
+		
 	</div>
 	
 </div>

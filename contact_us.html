@@ -39,37 +39,35 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <title>Sample App</title>
 </head>
 
 <body>
     <div class="s_app">
-		<h3 class="td_app app_hd">My App</h3>
+		<div class="header">
+			<h3> My App</h3>
+		</div>
 		 <img class="toggle" class="sidebar_img" src="img/mobile_ico.png" onclick="toggle_sidebar()" style="position: fixed; right: 10px; top: 10px" />
 		 <div id="sidebar" >
             <div class="m_header">
 				<h3>My App</h3>
 				<ul>
-					<li><a href="index.html"><span class="ic_m">-></span> Home</a></li>
-					<li><span class="ic_m">-></span> About</li>
-					<li><span class="ic_m">-></span> Gallery</li>
-					<li><span class="ic_m">-></span> Upcoming Events</li>
-					<li><span class="ic_m">-></span> Praise Reports</li>
-					<li><a href="contact_us.html"><span class="ic_m">-></span> Contact Us</a></li>
+					<li><a href="index.html"><span class="ic_m  fa fa-home"></span> Home</a></li>
+					<li><a href="about_us.html"><span class="ic_m fa fa-cubes"></span> About</a></li>
+					<li><span class="ic_m fa fa-calendar"></span> Upcoming Events</li>
+					<li><span class="ic_m fa fa-eye"></span> Praise Reports</li>
+					<li><a href="contact_us.html"><span class="ic_m fa fa-envelope"></span> Contact Us</a></li>
 				</ul>
 			</div>
         </div>
 		<div class="main_container">
 			<h3>Send Us A Message</h3>
-			<label>Name </label>
 			<input type="text" name="name" id="name" placeholder="Name"></input>
-			<label>Email </label>
 			<input type="text" name="email" id="email" placeholder="Email"></input>
 			<label class="up_label">Check to Receive Email Updates</label>
 			<input type="checkbox" name="update" id="update"></input>
-			<label>Subject</label>
 			<input type="text" name="subject" id="subject" placeholder="Subject"></input>
-			<label>Message</label>
 			<textarea type="text" name="message" id="message" placeholder="Message"></textarea>
 			<button id="sub_btn" name="submit">Submit</button>
 		</div>
